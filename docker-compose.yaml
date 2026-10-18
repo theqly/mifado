@@ -1,0 +1,37 @@
+services:
+  node1:
+    build:
+      context: node
+    container_name: node1
+    environment:
+      - NODE_ID=1
+    ports:
+      - "8001:8080"
+    networks:
+      - mifado-net
+
+  node2:
+    build:
+      context: node
+    container_name: node2
+    environment:
+      - NODE_ID=2
+    ports:
+      - "8002:8080"
+    networks:
+      - mifado-net
+
+  node3:
+    build:
+      context: node
+    container_name: node3
+    environment:
+      - NODE_ID=3
+    ports:
+      - "8003:8080"
+    networks:
+      - mifado-net
+
+networks:
+  mifado-net:
+    driver: bridge
