@@ -22,10 +22,10 @@ const (
 const (
 	noVote = -1
 
-	minElectionTimeout = 450 * time.Millisecond
-	maxElectionTimeout = 600 * time.Millisecond
-	electionCheckEvery = 10 * time.Millisecond
-	heartbeatInterval  = 50 * time.Millisecond
+	minElectionTimeout = 4500 * time.Millisecond
+	maxElectionTimeout = 6000 * time.Millisecond
+	electionCheckEvery = 100 * time.Millisecond
+	heartbeatInterval  = 500 * time.Millisecond
 	rpcTimeout         = 500 * time.Millisecond
 )
 
